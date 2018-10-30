@@ -1,0 +1,782 @@
+
+<type name="scratch::ScratchSprite" base="scratch::ScratchObj" isDynamic="false" isFinal="false" isStatic="false">
+  <extendsClass type="scratch::ScratchObj"/>
+  <extendsClass type="flash.display::Sprite"/>
+  <extendsClass type="flash.display::DisplayObjectContainer"/>
+  <extendsClass type="flash.display::InteractiveObject"/>
+  <extendsClass type="flash.display::DisplayObject"/>
+  <extendsClass type="flash.events::EventDispatcher"/>
+  <extendsClass type="Object"/>
+  <implementsInterface type="flash.events::IEventDispatcher"/>
+  <implementsInterface type="flash.display::IBitmapDrawable"/>
+  <constructor>
+    <parameter index="1" type="String" optional="true"/>
+  </constructor>
+  <variable name="spriteInfo" type="Object">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="2185"/>
+    </metadata>
+  </variable>
+  <variable name="objName" type="String">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1577"/>
+    </metadata>
+  </variable>
+  <variable name="indexInLibrary" type="int">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1619"/>
+    </metadata>
+  </variable>
+  <variable name="isClone" type="Boolean">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1993"/>
+    </metadata>
+  </variable>
+  <variable name="sounds" type="Array">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1789"/>
+    </metadata>
+  </variable>
+  <variable name="direction" type="Number">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1464"/>
+    </metadata>
+  </variable>
+  <variable name="listCache" type="Object">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="2208"/>
+    </metadata>
+  </variable>
+  <variable name="img" type="flash.display::Sprite">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="2023"/>
+    </metadata>
+  </variable>
+  <variable name="scripts" type="Array">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1718"/>
+    </metadata>
+  </variable>
+  <variable name="scriptComments" type="Array">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1750"/>
+    </metadata>
+  </variable>
+  <variable name="procCache" type="Object">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="2243"/>
+    </metadata>
+  </variable>
+  <variable name="rotationStyle" type="String">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1499"/>
+    </metadata>
+  </variable>
+  <variable name="filterPack" type="filters::FilterPack">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1958"/>
+    </metadata>
+  </variable>
+  <variable name="penIsDown" type="Boolean">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1683"/>
+    </metadata>
+  </variable>
+  <variable name="penShade" type="Number">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1788"/>
+    </metadata>
+  </variable>
+  <variable name="varCache" type="Object">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="2278"/>
+    </metadata>
+  </variable>
+  <variable name="volume" type="Number">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1893"/>
+    </metadata>
+  </variable>
+  <variable name="isDraggable" type="Boolean">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1578"/>
+    </metadata>
+  </variable>
+  <variable name="penWidth" type="Number">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1714"/>
+    </metadata>
+  </variable>
+  <variable name="bubble" type="scratch::TalkBubble">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1651"/>
+    </metadata>
+  </variable>
+  <variable name="penHue" type="Number">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1747"/>
+    </metadata>
+  </variable>
+  <variable name="currentCostumeIndex" type="Number">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1853"/>
+    </metadata>
+  </variable>
+  <variable name="penColorCache" type="Number">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1856"/>
+    </metadata>
+  </variable>
+  <variable name="scratchX" type="Number">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1406"/>
+    </metadata>
+  </variable>
+  <variable name="lists" type="Array">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1688"/>
+    </metadata>
+  </variable>
+  <variable name="variables" type="Array">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1654"/>
+    </metadata>
+  </variable>
+  <variable name="scratchY" type="Number">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1435"/>
+    </metadata>
+  </variable>
+  <variable name="instrument" type="int">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1926"/>
+    </metadata>
+  </variable>
+  <variable name="isStage" type="Boolean">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1617"/>
+    </metadata>
+  </variable>
+  <variable name="localMotionDirection" type="int">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="2110"/>
+    </metadata>
+  </variable>
+  <variable name="localMotionAmount" type="int">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="2070"/>
+    </metadata>
+  </variable>
+  <variable name="localFrameNum" type="int">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="2153"/>
+    </metadata>
+  </variable>
+  <variable name="costumes" type="Array">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="1820"/>
+    </metadata>
+  </variable>
+  <accessor name="scaleX" access="readwrite" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="scaleY" access="readwrite" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="contextMenu" access="readwrite" type="flash.ui::ContextMenu" declaredBy="flash.display::InteractiveObject"/>
+  <accessor name="useHandCursor" access="readwrite" type="Boolean" declaredBy="flash.display::Sprite"/>
+  <accessor name="name" access="readwrite" type="String" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="x" access="readwrite" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="y" access="readwrite" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="z" access="readwrite" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="parent" access="readonly" type="flash.display::DisplayObjectContainer" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="metaData" access="readwrite" type="Object" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="root" access="readonly" type="flash.display::DisplayObject" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="mask" access="readwrite" type="flash.display::DisplayObject" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="visible" access="readwrite" type="Boolean" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="stage" access="readonly" type="flash.display::Stage" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="scaleZ" access="readwrite" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="buttonMode" access="readwrite" type="Boolean" declaredBy="flash.display::Sprite"/>
+  <accessor name="rotationX" access="readwrite" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="mouseX" access="readonly" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="rotationY" access="readwrite" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="mouseY" access="readonly" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="rotationZ" access="readwrite" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="cacheAsBitmap" access="readwrite" type="Boolean" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="opaqueBackground" access="readwrite" type="Object" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="dropTarget" access="readonly" type="flash.display::DisplayObject" declaredBy="flash.display::Sprite"/>
+  <accessor name="scrollRect" access="readwrite" type="flash.geom::Rectangle" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="hitArea" access="readwrite" type="flash.display::Sprite" declaredBy="flash.display::Sprite"/>
+  <accessor name="filters" access="readwrite" type="Array" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="tabEnabled" access="readwrite" type="Boolean" declaredBy="flash.display::InteractiveObject"/>
+  <accessor name="blendMode" access="readwrite" type="String" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="tabIndex" access="readwrite" type="int" declaredBy="flash.display::InteractiveObject"/>
+  <accessor name="transform" access="readwrite" type="flash.geom::Transform" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="focusRect" access="readwrite" type="Object" declaredBy="flash.display::InteractiveObject"/>
+  <accessor name="scale9Grid" access="readwrite" type="flash.geom::Rectangle" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="mouseEnabled" access="readwrite" type="Boolean" declaredBy="flash.display::InteractiveObject"/>
+  <accessor name="doubleClickEnabled" access="readwrite" type="Boolean" declaredBy="flash.display::InteractiveObject"/>
+  <accessor name="accessibilityImplementation" access="readwrite" type="flash.accessibility::AccessibilityImplementation" declaredBy="flash.display::InteractiveObject">
+    <metadata name="Inspectable">
+      <arg key="environment" value="none"/>
+    </metadata>
+  </accessor>
+  <accessor name="softKeyboardInputAreaOfInterest" access="readwrite" type="flash.geom::Rectangle" declaredBy="flash.display::InteractiveObject"/>
+  <accessor name="needsSoftKeyboard" access="readwrite" type="Boolean" declaredBy="flash.display::InteractiveObject"/>
+  <accessor name="loaderInfo" access="readonly" type="flash.display::LoaderInfo" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="accessibilityProperties" access="readwrite" type="flash.accessibility::AccessibilityProperties" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="graphics" access="readonly" type="flash.display::Graphics" declaredBy="flash.display::Sprite"/>
+  <accessor name="soundTransform" access="readwrite" type="flash.media::SoundTransform" declaredBy="flash.display::Sprite"/>
+  <accessor name="blendShader" access="writeonly" type="flash.display::Shader" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="width" access="readwrite" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="height" access="readwrite" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="rotation" access="readwrite" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="textSnapshot" access="readonly" type="flash.text::TextSnapshot" declaredBy="flash.display::DisplayObjectContainer"/>
+  <accessor name="numChildren" access="readonly" type="int" declaredBy="flash.display::DisplayObjectContainer"/>
+  <accessor name="mouseChildren" access="readwrite" type="Boolean" declaredBy="flash.display::DisplayObjectContainer"/>
+  <accessor name="alpha" access="readwrite" type="Number" declaredBy="flash.display::DisplayObject"/>
+  <accessor name="tabChildren" access="readwrite" type="Boolean" declaredBy="flash.display::DisplayObjectContainer"/>
+  <method name="areInaccessibleObjectsUnderPoint" declaredBy="flash.display::DisplayObjectContainer" returnType="Boolean">
+    <parameter index="1" type="flash.geom::Point" optional="false"/>
+  </method>
+  <method name="objToGrab" declaredBy="scratch::ScratchSprite" returnType="scratch::ScratchSprite">
+    <parameter index="1" type="flash.events::MouseEvent" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="15656"/>
+    </metadata>
+  </method>
+  <method name="updateScriptsAfterTranslation" declaredBy="scratch::ScratchObj" returnType="void">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="18363"/>
+    </metadata>
+  </method>
+  <method name="setPenHue" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="Number" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="8582"/>
+    </metadata>
+  </method>
+  <method name="keepOnStage" declaredBy="scratch::ScratchSprite" returnType="void">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="5940"/>
+    </metadata>
+  </method>
+  <method name="setSize" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="Number" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="7833"/>
+    </metadata>
+  </method>
+  <method name="toString" declaredBy="flash.events::EventDispatcher" returnType="String"/>
+  <method name="lookupList" declaredBy="scratch::ScratchObj" returnType="watchers::ListWatcher">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="17213"/>
+    </metadata>
+  </method>
+  <method name="setScratchXY" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="Number" optional="false"/>
+    <parameter index="2" type="Number" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="5454"/>
+    </metadata>
+  </method>
+  <method name="unusedSpriteName" declaredBy="scratch::ScratchSprite" returnType="String">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="17126"/>
+    </metadata>
+  </method>
+  <method name="bitmap" declaredBy="scratch::ScratchSprite" returnType="flash.display::BitmapData">
+    <parameter index="1" type="Boolean" optional="true"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="10990"/>
+    </metadata>
+  </method>
+  <method name="setPenShade" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="Number" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="8709"/>
+    </metadata>
+  </method>
+  <method name="showBubble" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="*" optional="false"/>
+    <parameter index="2" type="String" optional="false"/>
+    <parameter index="3" type="Object" optional="false"/>
+    <parameter index="4" type="Boolean" optional="true"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="19076"/>
+    </metadata>
+  </method>
+  <method name="prepareToDrag" declaredBy="scratch::ScratchSprite" returnType="void">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="22989"/>
+    </metadata>
+  </method>
+  <method name="unusedSoundName" declaredBy="scratch::ScratchObj" returnType="String">
+    <parameter index="1" type="String" optional="true"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="4871"/>
+    </metadata>
+  </method>
+  <method name="unusedCostumeName" declaredBy="scratch::ScratchObj" returnType="String">
+    <parameter index="1" type="String" optional="true"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="4169"/>
+    </metadata>
+  </method>
+  <method name="showCostumeNamed" declaredBy="scratch::ScratchObj" returnType="void">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="3059"/>
+    </metadata>
+  </method>
+  <method name="menu" declaredBy="scratch::ScratchSprite" returnType="uiwidgets::Menu">
+    <parameter index="1" type="flash.events::MouseEvent" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="15761"/>
+    </metadata>
+  </method>
+  <method name="getVisibleBounds" declaredBy="scratch::ScratchSprite" returnType="flash.geom::Rectangle">
+    <parameter index="1" type="flash.display::DisplayObject" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="22553"/>
+    </metadata>
+  </method>
+  <method name="clearCaches" declaredBy="scratch::ScratchObj" returnType="void">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="2318"/>
+    </metadata>
+  </method>
+  <method name="readJSON" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="Object" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="22096"/>
+    </metadata>
+  </method>
+  <method name="allBlocks" declaredBy="scratch::ScratchObj" returnType="Array">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="12996"/>
+    </metadata>
+  </method>
+  <method name="currentCostume" declaredBy="scratch::ScratchObj" returnType="scratch::ScratchCostume">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="3888"/>
+    </metadata>
+  </method>
+  <method name="deleteCostume" declaredBy="scratch::ScratchObj" returnType="void">
+    <parameter index="1" type="scratch::ScratchCostume" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="2537"/>
+    </metadata>
+  </method>
+  <method name="deleteSound" declaredBy="scratch::ScratchObj" returnType="void">
+    <parameter index="1" type="scratch::ScratchSound" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="2874"/>
+    </metadata>
+  </method>
+  <method name="setDirection" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="Number" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="7013"/>
+    </metadata>
+  </method>
+  <method name="costumeNumber" declaredBy="scratch::ScratchObj" returnType="int">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="4013"/>
+    </metadata>
+  </method>
+  <method name="isCostumeFlipped" declaredBy="scratch::ScratchSprite" returnType="Boolean">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="9194"/>
+    </metadata>
+  </method>
+  <method name="showDetails" declaredBy="scratch::ScratchSprite" returnType="void">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="16982"/>
+    </metadata>
+  </method>
+  <method name="duplicateSprite" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="Boolean" optional="true"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="16514"/>
+    </metadata>
+  </method>
+  <method name="deleteSprite" declaredBy="scratch::ScratchSprite" returnType="void">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="17297"/>
+    </metadata>
+  </method>
+  <method name="clearFilters" declaredBy="scratch::ScratchObj" returnType="void">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="9854"/>
+    </metadata>
+  </method>
+  <method name="setMedia" declaredBy="scratch::ScratchObj" returnType="void">
+    <parameter index="1" type="Array" optional="false"/>
+    <parameter index="2" type="scratch::ScratchCostume" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="10158"/>
+    </metadata>
+  </method>
+  <method name="initFrom" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="scratch::ScratchSprite" optional="false"/>
+    <parameter index="2" type="Boolean" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="3512"/>
+    </metadata>
+  </method>
+  <method name="defaultArgsFor" declaredBy="scratch::ScratchSprite" returnType="Array">
+    <parameter index="1" type="String" optional="false"/>
+    <parameter index="2" type="Array" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="14994"/>
+    </metadata>
+  </method>
+  <method name="duplicate" declaredBy="scratch::ScratchSprite" returnType="scratch::ScratchSprite">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="3373"/>
+    </metadata>
+  </method>
+  <method name="startDrag" declaredBy="flash.display::Sprite" returnType="void">
+    <parameter index="1" type="Boolean" optional="true"/>
+    <parameter index="2" type="flash.geom::Rectangle" optional="true"/>
+  </method>
+  <method name="setVolume" declaredBy="scratch::ScratchObj" returnType="void">
+    <parameter index="1" type="Number" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="13919"/>
+    </metadata>
+  </method>
+  <method name="setInstrument" declaredBy="scratch::ScratchObj" returnType="void">
+    <parameter index="1" type="Number" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="14013"/>
+    </metadata>
+  </method>
+  <method name="stopTouchDrag" declaredBy="flash.display::Sprite" returnType="void">
+    <parameter index="1" type="int" optional="false"/>
+  </method>
+  <method name="globalToLocal" declaredBy="flash.display::DisplayObject" returnType="flash.geom::Point">
+    <parameter index="1" type="flash.geom::Point" optional="false"/>
+  </method>
+  <method name="localToGlobal" declaredBy="flash.display::DisplayObject" returnType="flash.geom::Point">
+    <parameter index="1" type="flash.geom::Point" optional="false"/>
+  </method>
+  <method name="getBounds" declaredBy="scratch::ScratchSprite" returnType="flash.geom::Rectangle">
+    <parameter index="1" type="flash.display::DisplayObject" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="10210"/>
+    </metadata>
+  </method>
+  <method name="getRect" declaredBy="flash.display::DisplayObject" returnType="flash.geom::Rectangle">
+    <parameter index="1" type="flash.display::DisplayObject" optional="false"/>
+  </method>
+  <method name="requestSoftKeyboard" declaredBy="flash.display::InteractiveObject" returnType="Boolean"/>
+  <method name="hitTestObject" declaredBy="flash.display::DisplayObject" returnType="Boolean">
+    <parameter index="1" type="flash.display::DisplayObject" optional="false"/>
+  </method>
+  <method name="hitTestPoint" declaredBy="scratch::ScratchSprite" returnType="Boolean">
+    <parameter index="1" type="Number" optional="false"/>
+    <parameter index="2" type="Number" optional="false"/>
+    <parameter index="3" type="Boolean" optional="true"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="9792"/>
+    </metadata>
+  </method>
+  <method name="globalToLocal3D" declaredBy="flash.display::DisplayObject" returnType="flash.geom::Vector3D">
+    <parameter index="1" type="flash.geom::Point" optional="false"/>
+  </method>
+  <method name="local3DToGlobal" declaredBy="flash.display::DisplayObject" returnType="flash.geom::Point">
+    <parameter index="1" type="flash.geom::Vector3D" optional="false"/>
+  </method>
+  <method name="varNames" declaredBy="scratch::ScratchObj" returnType="Array">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="14657"/>
+    </metadata>
+  </method>
+  <method name="setVarTo" declaredBy="scratch::ScratchObj" returnType="void">
+    <parameter index="1" type="String" optional="false"/>
+    <parameter index="2" type="*" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="14804"/>
+    </metadata>
+  </method>
+  <method name="procedureDefinitions" declaredBy="scratch::ScratchObj" returnType="Array">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="14150"/>
+    </metadata>
+  </method>
+  <method name="handleTool" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="String" optional="false"/>
+    <parameter index="2" type="flash.events::MouseEvent" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="16045"/>
+    </metadata>
+  </method>
+  <method name="hasName" declaredBy="scratch::ScratchObj" returnType="Boolean">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="15197"/>
+    </metadata>
+  </method>
+  <method name="deleteVar" declaredBy="scratch::ScratchObj" returnType="void">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="16092"/>
+    </metadata>
+  </method>
+  <method name="listNames" declaredBy="scratch::ScratchObj" returnType="Array">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="16467"/>
+    </metadata>
+  </method>
+  <method name="updateEffectsFor3D" declaredBy="scratch::ScratchObj" returnType="void">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="9054"/>
+    </metadata>
+  </method>
+  <method name="clearCachedBitmap" declaredBy="scratch::ScratchSprite" returnType="void">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="9313"/>
+    </metadata>
+  </method>
+  <method name="updateBubble" declaredBy="scratch::ScratchSprite" returnType="void">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="19689"/>
+    </metadata>
+  </method>
+  <method name="lookupProcedure" declaredBy="scratch::ScratchObj" returnType="blocks::Block">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="14394"/>
+    </metadata>
+  </method>
+  <method name="bounds" declaredBy="scratch::ScratchSprite" returnType="flash.geom::Rectangle">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="10437"/>
+    </metadata>
+  </method>
+  <method name="lookupOrCreateList" declaredBy="scratch::ScratchObj" returnType="watchers::ListWatcher">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="16847"/>
+    </metadata>
+  </method>
+  <method name="showCostume" declaredBy="scratch::ScratchObj" returnType="void">
+    <parameter index="1" type="Number" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="3369"/>
+    </metadata>
+  </method>
+  <method name="defaultVarName" declaredBy="scratch::ScratchObj" returnType="String">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="12546"/>
+    </metadata>
+  </method>
+  <method name="defaultListName" declaredBy="scratch::ScratchObj" returnType="String">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="12765"/>
+    </metadata>
+  </method>
+  <method name="deleteList" declaredBy="scratch::ScratchObj" returnType="void">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="17598"/>
+    </metadata>
+  </method>
+  <method name="stopDrag" declaredBy="scratch::ScratchSprite" returnType="void">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="23123"/>
+    </metadata>
+  </method>
+  <method name="startTouchDrag" declaredBy="flash.display::Sprite" returnType="void">
+    <parameter index="1" type="int" optional="false"/>
+    <parameter index="2" type="Boolean" optional="true"/>
+    <parameter index="3" type="flash.geom::Rectangle" optional="true"/>
+  </method>
+  <method name="indexOfCostumeNamed" declaredBy="scratch::ScratchObj" returnType="int">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="3182"/>
+    </metadata>
+  </method>
+  <method name="click" declaredBy="scratch::ScratchObj" returnType="void">
+    <parameter index="1" type="flash.events::MouseEvent" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="17956"/>
+    </metadata>
+  </method>
+  <method name="writeJSON" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="util::JSON" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="21585"/>
+    </metadata>
+  </method>
+  <method name="hideBubble" declaredBy="scratch::ScratchSprite" returnType="void">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="19564"/>
+    </metadata>
+  </method>
+  <method name="instantiateFromJSON" declaredBy="scratch::ScratchObj" returnType="void">
+    <parameter index="1" type="scratch::ScratchStage" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="20600"/>
+    </metadata>
+  </method>
+  <method name="copyToShare" declaredBy="scratch::ScratchSprite" returnType="scratch::ScratchSprite">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="18791"/>
+    </metadata>
+  </method>
+  <method name="dispatchEvent" declaredBy="flash.events::EventDispatcher" returnType="Boolean">
+    <parameter index="1" type="flash.events::Event" optional="false"/>
+    <metadata name="cppcall"/>
+  </method>
+  <method name="addEventListener" declaredBy="flash.events::EventDispatcher" returnType="void">
+    <parameter index="1" type="String" optional="false"/>
+    <parameter index="2" type="Function" optional="false"/>
+    <parameter index="3" type="Boolean" optional="true"/>
+    <parameter index="4" type="int" optional="true"/>
+    <parameter index="5" type="Boolean" optional="true"/>
+  </method>
+  <method name="removeEventListener" declaredBy="flash.events::EventDispatcher" returnType="void">
+    <parameter index="1" type="String" optional="false"/>
+    <parameter index="2" type="Function" optional="false"/>
+    <parameter index="3" type="Boolean" optional="true"/>
+  </method>
+  <method name="hasEventListener" declaredBy="flash.events::EventDispatcher" returnType="Boolean">
+    <parameter index="1" type="String" optional="false"/>
+  </method>
+  <method name="willTrigger" declaredBy="flash.events::EventDispatcher" returnType="Boolean">
+    <parameter index="1" type="String" optional="false"/>
+  </method>
+  <method name="findSound" declaredBy="scratch::ScratchObj" returnType="scratch::ScratchSound">
+    <parameter index="1" type="*" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="13207"/>
+    </metadata>
+  </method>
+  <method name="contains" declaredBy="flash.display::DisplayObjectContainer" returnType="Boolean">
+    <parameter index="1" type="flash.display::DisplayObject" optional="false"/>
+  </method>
+  <method name="allObjects" declaredBy="scratch::ScratchObj" returnType="Array">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="2482"/>
+    </metadata>
+  </method>
+  <method name="addChildAt" declaredBy="flash.display::DisplayObjectContainer" returnType="flash.display::DisplayObject">
+    <parameter index="1" type="flash.display::DisplayObject" optional="false"/>
+    <parameter index="2" type="int" optional="false"/>
+  </method>
+  <method name="setInitialCostume" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="scratch::ScratchCostume" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="2925"/>
+    </metadata>
+  </method>
+  <method name="addChild" declaredBy="flash.display::DisplayObjectContainer" returnType="flash.display::DisplayObject">
+    <parameter index="1" type="flash.display::DisplayObject" optional="false"/>
+    <metadata name="cppcall"/>
+  </method>
+  <method name="setRotationStyle" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="3025"/>
+    </metadata>
+  </method>
+  <method name="getChildIndex" declaredBy="flash.display::DisplayObjectContainer" returnType="int">
+    <parameter index="1" type="flash.display::DisplayObject" optional="false"/>
+  </method>
+  <method name="removeChild" declaredBy="flash.display::DisplayObjectContainer" returnType="flash.display::DisplayObject">
+    <parameter index="1" type="flash.display::DisplayObject" optional="false"/>
+  </method>
+  <method name="applyFilters" declaredBy="scratch::ScratchObj" returnType="void">
+    <parameter index="1" type="Boolean" optional="true"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="8490"/>
+    </metadata>
+  </method>
+  <method name="removeChildAt" declaredBy="flash.display::DisplayObjectContainer" returnType="flash.display::DisplayObject">
+    <parameter index="1" type="int" optional="false"/>
+  </method>
+  <method name="getChildAt" declaredBy="flash.display::DisplayObjectContainer" returnType="flash.display::DisplayObject">
+    <parameter index="1" type="int" optional="false"/>
+  </method>
+  <method name="getSummary" declaredBy="scratch::ScratchObj" returnType="String">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="21707"/>
+    </metadata>
+  </method>
+  <method name="lookupOrCreateVar" declaredBy="scratch::ScratchObj" returnType="interpreter::Variable">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="15395"/>
+    </metadata>
+  </method>
+  <method name="setChildIndex" declaredBy="flash.display::DisplayObjectContainer" returnType="void">
+    <parameter index="1" type="flash.display::DisplayObject" optional="false"/>
+    <parameter index="2" type="int" optional="false"/>
+  </method>
+  <method name="updateCostume" declaredBy="scratch::ScratchObj" returnType="void">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="3830"/>
+    </metadata>
+  </method>
+  <method name="setPenColor" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="Number" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="8363"/>
+    </metadata>
+  </method>
+  <method name="getChildByName" declaredBy="flash.display::DisplayObjectContainer" returnType="flash.display::DisplayObject">
+    <parameter index="1" type="String" optional="false"/>
+  </method>
+  <method name="getObjectsUnderPoint" declaredBy="flash.display::DisplayObjectContainer" returnType="Array">
+    <parameter index="1" type="flash.geom::Point" optional="false"/>
+  </method>
+  <method name="getSize" declaredBy="scratch::ScratchSprite" returnType="Number">
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="7773"/>
+    </metadata>
+  </method>
+  <method name="lookupVar" declaredBy="scratch::ScratchObj" returnType="interpreter::Variable">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="15739"/>
+    </metadata>
+  </method>
+  <method name="ownsVar" declaredBy="scratch::ScratchObj" returnType="Boolean">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="14973"/>
+    </metadata>
+  </method>
+  <method name="swapChildrenAt" declaredBy="flash.display::DisplayObjectContainer" returnType="void">
+    <parameter index="1" type="int" optional="false"/>
+    <parameter index="2" type="int" optional="false"/>
+  </method>
+  <method name="ownsList" declaredBy="scratch::ScratchObj" returnType="Boolean">
+    <parameter index="1" type="String" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="16621"/>
+    </metadata>
+  </method>
+  <method name="swapChildren" declaredBy="flash.display::DisplayObjectContainer" returnType="void">
+    <parameter index="1" type="flash.display::DisplayObject" optional="false"/>
+    <parameter index="2" type="flash.display::DisplayObject" optional="false"/>
+  </method>
+  <method name="setPenSize" declaredBy="scratch::ScratchSprite" returnType="void">
+    <parameter index="1" type="Number" optional="false"/>
+    <metadata name="__go_to_definition_help">
+      <arg key="pos" value="8207"/>
+    </metadata>
+  </method>
+  <method name="removeChildren" declaredBy="flash.display::DisplayObjectContainer" returnType="void">
+    <parameter index="1" type="int" optional="true"/>
+    <parameter index="2" type="int" optional="true"/>
+  </method>
+  <metadata name="__go_to_ctor_definition_help">
+    <arg key="pos" value="2257"/>
+  </metadata>
+  <metadata name="__go_to_definition_help">
+    <arg key="pos" value="1358"/>
+  </metadata>
+</type>

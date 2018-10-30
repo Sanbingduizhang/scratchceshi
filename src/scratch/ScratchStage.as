@@ -23,27 +23,48 @@
 // A Scratch stage object. Supports a drawing surface for the pen commands.
 
 package scratch {
-import blocks.BlockArg;
+// import blocks.BlockArg;
 
+// import flash.display.*;
+// import flash.geom.*;
+// import flash.media.*;
+// import flash.events.*;
+// import flash.text.*;
+// import flash.system.Capabilities;
+// import flash.utils.ByteArray;
+// import flash.net.FileReference;
+// import blocks.Block;
+// import filters.FilterPack;
+// import translation.Translator;
+// import uiwidgets.Menu;
+// import ui.media.MediaInfo;
+// import util.*;
+// import watchers.*;
+// import assets.Resources;
+// import by.blooddy.crypto.image.PNG24Encoder;
+// import by.blooddy.crypto.image.PNGFilter;
+// import by.blooddy.crypto.MD5;
+
+import by.blooddy.crypto.MD5;
+import uiwidgets.Menu;
+import ui.media.MediaInfo;
+import assets.*;
+import blocks.*;
+import by.blooddy.crypto.*;
+import by.blooddy.crypto.image.*;
+import filters.*;
 import flash.display.*;
 import flash.geom.*;
 import flash.media.*;
 import flash.events.*;
 import flash.text.*;
-import flash.system.Capabilities;
-import flash.utils.ByteArray;
+import flash.system.*;
+import flash.utils.*;
 import flash.net.FileReference;
-import blocks.Block;
-import filters.FilterPack;
-import translation.Translator;
-import uiwidgets.Menu;
-import ui.media.MediaInfo;
+import translation.*;
+import uiwidgets.*;
 import util.*;
 import watchers.*;
-import assets.Resources;
-import by.blooddy.crypto.image.PNG24Encoder;
-import by.blooddy.crypto.image.PNGFilter;
-import by.blooddy.crypto.MD5;
 
 public class ScratchStage extends ScratchObj {
 
@@ -313,6 +334,22 @@ public class ScratchStage extends ScratchObj {
 		var pngData:ByteArray = PNG24Encoder.encode(bitmapData, PNGFilter.PAETH);
 		var file:FileReference = new FileReference();
 		file.save(pngData, 'stage.png');
+	}
+	//新增
+	public function getScreenshotData():ByteArray {
+		var bitmapData:BitmapData = new BitmapData(STAGEW, STAGEH, true, 0);
+		bitmapData.draw(this);
+		var loc_1:* = JPEGEncoder.encode(bitmapData,90);
+		return loc_1;
+	}
+
+	public function getScreenshotDataArea(param1:Number,param2:Number,param3:Number,param4:Number):ByteArray {
+		var bitmapData:BitmapData = new BitmapData(param3, param4, true, 0);
+		var loc_6:* = -(param1 - param3 / 2 + STAGEW / 2);
+		var loc_7:* = param2 + param4 / 2 -STAGEH / 2;
+		bitmapData.draw(this,new Matrix(1,0,0,1,loc_6,loc_7));
+		var loc_8:* = JPEGEncoder.encode(bitmapData,90);
+		return loc_8;
 	}
 
 	/* Scrolling support */

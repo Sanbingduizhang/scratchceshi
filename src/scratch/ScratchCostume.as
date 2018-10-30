@@ -38,22 +38,36 @@
 // converting to/from JPEG format.
 
 package scratch {
-import by.blooddy.crypto.MD5;
-import by.blooddy.crypto.image.PNG24Encoder;
-import by.blooddy.crypto.image.PNGFilter;
+// import by.blooddy.crypto.MD5;
+// import by.blooddy.crypto.image.PNG24Encoder;
+// import by.blooddy.crypto.image.PNGFilter;
 
+// import flash.display.*;
+// import flash.geom.*;
+// import flash.text.TextField;
+// import flash.utils.*;
+
+// import render3d.DisplayObjectContainerIn3D;
+
+// import svgeditor.objs.SegmentationState;
+
+// import svgutils.*;
+
+// import util.*;
+
+// import __As3__.vec.*;
+import by.blooddy.crypto.*;
+import by.blooddy.crypto.image.*;
+import by.blooddy.crypto.MD5
 import flash.display.*;
 import flash.geom.*;
-import flash.text.TextField;
+import flash.text.*;
 import flash.utils.*;
-
-import render3d.DisplayObjectContainerIn3D;
-
-import svgeditor.objs.SegmentationState;
-
+import render3d.*;
+import svgeditor.objs.*;
 import svgutils.*;
-
 import util.*;
+
 
 public class ScratchCostume {
 
@@ -610,6 +624,9 @@ public class ScratchCostume {
 			textLayerID = jsonObj.textLayerID;
 			textLayerMD5 = jsonObj.textLayerMD5;
 		}
+	}
+	public function getEncodedImageData():ByteArray {
+		return JPEGEncoder.encode(baseLayerBitmap,50);
 	}
 
 	public function prepareToSave():void {

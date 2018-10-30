@@ -24,25 +24,38 @@
 // rotation style, size, draggability, and pen state.
 
 package scratch {
-import filters.FilterPack;
+// import filters.FilterPack;
 
+// import flash.display.*;
+// import flash.events.*;
+// import flash.geom.*;
+// import flash.net.FileReference;
+// import flash.utils.*;
+
+// import interpreter.Variable;
+
+// import logging.LogLevel;
+
+// import translation.Translator;
+
+// import uiwidgets.Menu;
+
+// import util.*;
+
+// import watchers.ListWatcher;
+
+import filters.*;
 import flash.display.*;
 import flash.events.*;
 import flash.geom.*;
-import flash.net.FileReference;
+import flash.net.*;
 import flash.utils.*;
-
-import interpreter.Variable;
-
-import logging.LogLevel;
-
-import translation.Translator;
-
-import uiwidgets.Menu;
-
+import interpreter.*;
+import logging.*;
+import translation.*;
+import uiwidgets.*;
 import util.*;
-
-import watchers.ListWatcher;
+import watchers.*;
 
 public class ScratchSprite extends ScratchObj {
 

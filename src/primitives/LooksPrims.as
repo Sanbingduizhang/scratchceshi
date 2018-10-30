@@ -27,7 +27,7 @@ package primitives {
 	import blocks.*;
 	import interpreter.*;
 	import scratch.*;
-
+	import util.*;
 public class LooksPrims {
 
 	private var app:Scratch;
@@ -89,13 +89,43 @@ public class LooksPrims {
 	///////////start/////
 	//自定义图片
 	private function primCostumeImage(b:Block):String {
-		var s:ScratchObj = interp.targetObj();
-		return (s == null) ? '' : s.currentCostume().costumeName;
+		var s:ScratchSprite = interp.targetSprite();
+		// var xml:XML = flash.utils.describeType(s);
+        //     trace(xml.toXMLString());
+		var s1:* = null;
+		var s2:* = undefined;
+		if (s != null) {
+			s1 = s.currentCostume();
+			if (s1 != null) {
+				s2 = s1.getEncodedImageData();
+				if (s2 != null) {
+					return Base64Encoder.encode(s2);
+				}
+			}
+		}
+		return null;
 	}
 	//背景图片
 	private function primBackdropImage(b:Block):String {
-		var s:ScratchObj = interp.targetObj();
-		return (s == null) ? '' : s.currentCostume().costumeName;
+		var s:ScratchSprite = interp.targetSprite();
+		if (s == null) {
+			return null;
+		}
+		var s1:* = s.currentCostume();
+		if (s1 == null) {
+			return null;
+		}
+		var s2:* = s1.width();
+		var s3:* = s1.height();
+		// scaleX
+		var s4:Number = s.scratchX;
+		var s5:Number = s.scratchY;
+		
+		var s6:* = app.stagePane.getScreenshotDataArea(s4,s5,s2,s3);
+		if (s6 == null) {
+			return null;
+		}
+		return Base64Encoder.encode(s6);
 	}
 	//////////end//////
 
