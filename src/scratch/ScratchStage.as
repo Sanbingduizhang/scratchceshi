@@ -22,6 +22,11 @@
 //
 // A Scratch stage object. Supports a drawing surface for the pen commands.
 
+
+/**
+ * import部分和源码引用此处改为引用引用的文件夹下的所有内容，及改为*
+ * by fxl 2018-10-31
+ */
 package scratch {
 // import blocks.BlockArg;
 
@@ -335,7 +340,12 @@ public class ScratchStage extends ScratchObj {
 		var file:FileReference = new FileReference();
 		file.save(pngData, 'stage.png');
 	}
-	//新增
+
+	/**
+	 * 新增获取背景图片信息的相关内容
+	 * import部分和源码引用此处改为引用引用的文件夹下的所有内容，及改为*
+	 * by fxl 2018-10-31
+	 */
 	public function getScreenshotData():ByteArray {
 		var bitmapData:BitmapData = new BitmapData(STAGEW, STAGEH, true, 0);
 		bitmapData.draw(this);

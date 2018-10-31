@@ -163,6 +163,7 @@ public class Specs {
 		["backdrop name",						"r", 2, "sceneName"],
 		["size",								"r", 2, "scale"],
 		//新增块---先显示，后续增加方法---//primitives/looksPrims.as
+		//by fxl 2018-10-31
 		["costume image",						"r", 2, "costumeImage"],
 		["backdrop image",						"r", 2, "backdropImage"],
 

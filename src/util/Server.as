@@ -258,16 +258,24 @@ public class Server implements IServer {
 	// -----------------------------
 	// Asset API
 	//------------------------------
+	/**
+	 * 修改获取json文件路径
+	 * by fxl 2018-10-31
+	 */
 	public function getAsset(md5:String, whenDone:Function):URLLoader {
 //		if (BackpackPart.localAssets[md5] && BackpackPart.localAssets[md5].length > 0) {
 //			whenDone(BackpackPart.localAssets[md5]);
 //			return null;
 //		}
 		// var url:String = URLs.assetCdnPrefix + URLs.internalAPI + 'asset/' + md5 + '/get/';
-		var url:String = "media/" + md5;
+		var url:String = "media/asset/" + md5;
 		return serverGet(url, whenDone);
 	}
 
+	/**
+	 * 修改获取json文件路径
+	 * by fxl 2018-10-31
+	 */
 	public function getMediaLibrary(libraryType:String, whenDone:Function):URLLoader {
 		// var url:String = getCdnStaticSiteURL() + 'medialibraries/' + libraryType + 'Library.json';
 		var url:String = "media/libs/" +libraryType + "Library.json";
@@ -316,9 +324,13 @@ public class Server implements IServer {
 		return result;
 	}
 
+	/**
+	 * 修改获取json文件路径
+	 * by fxl 2018-10-31
+	 */
 	public function getThumbnail(idAndExt:String, w:int, h:int, whenDone:Function):URLLoader {
 		// var url:String = getCdnStaticSiteURL() + 'medialibrarythumbnails/' + idAndExt;
-		var url:String = "media/" + idAndExt;
+		var url:String = "media/thumb/" + idAndExt;
 		return downloadThumbnail(url, w, h, whenDone);
 	}
 
@@ -340,6 +352,10 @@ public class Server implements IServer {
 		if (sharedObj.data.lang) whenDone(sharedObj.data.lang);
 	}
 
+	/**
+	 * 修改默认语言格式，可能无用
+	 * by fxl 2018-10-31
+	 */
 	public function setSelectedLang(lang:String):void {
 		// Record the language setting.
 		var sharedObj:SharedObject = SharedObject.getLocal('Scratch');

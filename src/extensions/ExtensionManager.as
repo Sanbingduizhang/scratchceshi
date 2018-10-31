@@ -56,12 +56,17 @@ public class ExtensionManager {
 
 	// Experimental extensions must be hosted on one of these domains
 	// These should start with '.' to avoid accepting things like 'malicious.not_github.io'
+
+	/**
+	 * 新增加三个url地址路劲指向，期待可以在本以下网站使用
+	 * by fxl 2018-10-31
+	 */
 	static public const allowedDomains:Vector.<String> = new <String>[
 			'.github.io',
 			'.coding.me',
-			'127.0.0.1',
-			'localhost',
-			'.ischool365.com'
+			'127.0.0.1',			//新增
+			'localhost',			//新增
+			'.ischool365.com'		//新增
 	];
 
 	public function ExtensionManager(app:Scratch) {

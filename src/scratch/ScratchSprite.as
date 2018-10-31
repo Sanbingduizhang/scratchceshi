@@ -23,6 +23,11 @@
 // A Scratch sprite object. State specific to sprites includes: position, direction,
 // rotation style, size, draggability, and pen state.
 
+
+/**
+ * import部分和源码引用此处改为引用引用的文件夹下的所有内容，及改为*
+ * by fxl 2018-10-31
+ */
 package scratch {
 // import filters.FilterPack;
 

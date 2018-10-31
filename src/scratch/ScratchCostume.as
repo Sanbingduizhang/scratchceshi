@@ -37,6 +37,11 @@
 // avoids the possible image degradation that might occur when repeatedly
 // converting to/from JPEG format.
 
+
+/**
+ * import部分和源码引用此处改为引用引用的文件夹下的所有内容，及改为*
+ * by fxl 2018-10-31
+ */
 package scratch {
 // import by.blooddy.crypto.MD5;
 // import by.blooddy.crypto.image.PNG24Encoder;
@@ -625,6 +630,11 @@ public class ScratchCostume {
 			textLayerMD5 = jsonObj.textLayerMD5;
 		}
 	}
+
+	/**
+	 * 新增getEncodedImageData()方法，用来获取图片的相关信息
+	 * by fxl 2018-10-31
+	 */
 	public function getEncodedImageData():ByteArray {
 		return JPEGEncoder.encode(baseLayerBitmap,50);
 	}

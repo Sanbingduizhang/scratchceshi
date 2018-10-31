@@ -22,6 +22,10 @@
 //
 // Looks primitives.
 
+/**
+ * import部分和源码引用此处改为引用util文件夹下的所有内容
+ * by fxl 2018-10-31
+ */
 package primitives {
 	import flash.utils.Dictionary;
 	import blocks.*;
@@ -39,6 +43,10 @@ public class LooksPrims {
 	}
 
 	public function addPrimsTo(primTable:Dictionary):void {
+		/**
+		 * 新增两个块元素方法
+		 * by fxl 2018-10-31
+		 */
 		primTable['costumeImage']			= primCostumeImage;		//新增自定义图片
 		primTable['backdropImage']			= primBackdropImage;	//新增背景图片
 		primTable['lookLike:']				= primShowCostume;
@@ -85,13 +93,20 @@ public class LooksPrims {
 
 		primTable['setRotationStyle']		= primSetRotationStyle;
 	}
-	//新增自定义图片和背景图片
-	///////////start/////
+	/**
+	 * 新增自定义图片和背景图片
+	 * by fxl 2018-10-31
+	 */
+	///////////---------start--------------/////
+	/**
+	 * 打印获取对象所有属性，方法等
+	 * by fxl 2018-10-31
+	 * // var xml:XML = flash.utils.describeType(s);
+	 * // trace(xml.toXMLString());
+	 */
 	//自定义图片
 	private function primCostumeImage(b:Block):String {
 		var s:ScratchSprite = interp.targetSprite();
-		// var xml:XML = flash.utils.describeType(s);
-        //     trace(xml.toXMLString());
 		var s1:* = null;
 		var s2:* = undefined;
 		if (s != null) {
@@ -127,9 +142,7 @@ public class LooksPrims {
 		}
 		return Base64Encoder.encode(s6);
 	}
-	//////////end//////
-
-
+	//////////----------------end-------------------//////
 
 	private function primNextCostume(b:Block):void {
 		var s:ScratchObj = interp.targetObj();

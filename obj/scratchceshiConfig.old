@@ -32,17 +32,17 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>D:\scflash\scratchceshi\src</path-element>
+      <path-element>C:\Users\a71\Desktop\scratch-flash\src</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
     <library-path append="true">
-      <path-element>D:\scflash\scratchceshi\libs\as3corelib.swc</path-element>
-      <path-element>D:\scflash\scratchceshi\libs\blooddy_crypto.swc</path-element>
-      <path-element>D:\scflash\scratchceshi\libs\grabcut.swc</path-element>
+      <path-element>C:\Users\a71\Desktop\scratch-flash\libs\as3corelib.swc</path-element>
+      <path-element>C:\Users\a71\Desktop\scratch-flash\libs\blooddy_crypto.swc</path-element>
+      <path-element>C:\Users\a71\Desktop\scratch-flash\libs\grabcut.swc</path-element>
     </library-path>
   </compiler>
   <file-specs>
-    <path-element>D:\scflash\scratchceshi\src\Scratch.as</path-element>
+    <path-element>C:\Users\a71\Desktop\scratch-flash\src\Scratch.as</path-element>
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>30</default-frame-rate>
