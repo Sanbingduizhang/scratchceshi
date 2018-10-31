@@ -58,7 +58,10 @@ public class ExtensionManager {
 	// These should start with '.' to avoid accepting things like 'malicious.not_github.io'
 	static public const allowedDomains:Vector.<String> = new <String>[
 			'.github.io',
-			'.coding.me'
+			'.coding.me',
+			'127.0.0.1',
+			'localhost',
+			'.ischool365.com'
 	];
 
 	public function ExtensionManager(app:Scratch) {
