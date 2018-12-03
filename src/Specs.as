@@ -178,6 +178,8 @@ public class Specs {
 		["-"],
 		["backdrop name",						"r", 102, "sceneName"],
 		["backdrop #",							"r", 102, "backgroundIndex"],
+		//新增stage looks中的背景相关 by fxl 2018-11-05   仅仅增加块元素，暂时使用looks中的costumeImage的方法，可能获取的时null
+		["backdrop image",						"r", 102, "costumeImage"],
 
 		// sound
 		["play sound %m.sound",					" ", 3, "playSound:",						"pop"],

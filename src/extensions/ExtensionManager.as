@@ -62,11 +62,10 @@ public class ExtensionManager {
 	 * by fxl 2018-10-31
 	 */
 	static public const allowedDomains:Vector.<String> = new <String>[
-			'.github.io',
-			'.coding.me',
-			'127.0.0.1',			//新增
-			'localhost',			//新增
-			'.ischool365.com'		//新增
+			'.*.*',
+			// '127.0.0.1',			//新增
+			// 'localhost',			//新增
+			// '.ischool365.com'		//新增
 	];
 
 	public function ExtensionManager(app:Scratch) {
@@ -360,25 +359,25 @@ public class ExtensionManager {
 			ext.isInternal = false;
 			ext.menus = extObj.menus;
 			if(extObj.javascriptURL) {
-				if (!Scratch.app.isExtensionDevMode) {
-					extensionRefused(extObj, 'Experimental extensions are only supported on ScratchX.');
-					continue;
-				}
-				var domainAllowed:Boolean = false;
-				var url:String = URLUtil.getServerName(extObj.javascriptURL).toLowerCase();
-				for (var i:int = 0; i < allowedDomains.length; ++i) {
-					if (StringUtil.endsWith(url, allowedDomains[i])) {
-						domainAllowed = true;
-						break;
-					}
-				}
-				if (!domainAllowed) {
-					extensionRefused(
-							extObj,
-							'Experimental extensions must be hosted on an approved domain. Approved domains are: ' +
-							allowedDomains.join(', '));
-					continue;
-				}
+				// if (!Scratch.app.isExtensionDevMode) {
+				// 	extensionRefused(extObj, 'Experimental extensions are only supported on ScratchX.');
+				// 	continue;
+				// }
+				// var domainAllowed:Boolean = false;
+				// var url:String = URLUtil.getServerName(extObj.javascriptURL).toLowerCase();
+				// for (var i:int = 0; i < allowedDomains.length; ++i) {
+				// 	if (StringUtil.endsWith(url, allowedDomains[i])) {
+				// 		domainAllowed = true;
+				// 		break;
+				// 	}
+				// }
+				// if (!domainAllowed) {
+				// 	extensionRefused(
+				// 			extObj,
+				// 			'Experimental extensions must be hosted on an approved domain. Approved domains are: ' +
+				// 			allowedDomains.join(', '));
+				// 	continue;
+				// }
 				ext.javascriptURL = extObj.javascriptURL;
 				ext.showBlocks = false;
 				if(extObj.id) ext.id = extObj.id;
